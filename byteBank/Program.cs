@@ -1,15 +1,20 @@
-﻿Console.WriteLine("Bem vindo(a) ao seu banco, ByteBank!");
+﻿using byteBank;
 
-string titular = "Usuario";
-string conta = "10123-X";
-int numeroAgencia = 23;
-string nomeAgencia = "Agencia Central";
-double saldo = 93.50;
+Console.WriteLine("Bem vindo(a) ao seu banco, ByteBank!");
 
-Console.WriteLine("Titular: " + titular);
-Console.WriteLine("Conta: " + conta);
-Console.WriteLine("Numero da Agencia: " + numeroAgencia);
-Console.WriteLine("Nome da Agencia: " + nomeAgencia);
-Console.WriteLine("Saldo: " + saldo);
+//Criando um objeto do tipo ContaCorrente
+ContaCorrente conta1 = new ContaCorrente();
+
+conta1.titular = "Usuario";
+conta1.conta = "10123-X";
+conta1.numeroAgencia = 23;
+conta1.nomeAgencia = "Agencia Central";
+conta1.saldo = 100;
+
+Console.WriteLine("Titular: " + conta1.titular);
+Console.WriteLine("Conta: " + conta1.conta);
+Console.WriteLine("Numero da Agencia: " + conta1.numeroAgencia);
+Console.WriteLine("Nome da Agencia: " + conta1.nomeAgencia);
+Console.WriteLine("Saldo: " + conta1.saldo);
 
 Console.ReadKey();

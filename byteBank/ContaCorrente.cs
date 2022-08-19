@@ -1,5 +1,6 @@
 ﻿namespace byteBank
 {   
+    //A classe e um modelo para criar um objeto
     public class ContaCorrente
     {
         public string titular;
