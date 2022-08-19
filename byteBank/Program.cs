@@ -2,7 +2,7 @@
 
 Console.WriteLine("Bem vindo(a) ao seu banco, ByteBank!");
 
-//Criando um objeto do tipo ContaCorrente
+//Criando um objeto do tipo ContaCorrente e instanciando na memoria com o operador new.
 ContaCorrente conta1 = new ContaCorrente();
 
 conta1.titular = "Usuario";
