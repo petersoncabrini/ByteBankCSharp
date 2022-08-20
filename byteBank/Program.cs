@@ -2,19 +2,18 @@
 
 Console.WriteLine("Bem vindo(a) ao seu banco, ByteBank!");
 
-//Criando um objeto do tipo ContaCorrente e instanciando na memoria com o operador new.
 ContaCorrente conta1 = new ContaCorrente();
-
-conta1.titular = "Usuario";
-conta1.conta = "10123-X";
-conta1.numeroAgencia = 23;
-conta1.nomeAgencia = "Agencia Central";
+conta1.titular = "André Silva";
+conta1.conta = "110123-X";
+conta1.numeroAgencia = 123;
+conta1.nomeAgencia = "Agência Central";
 conta1.saldo = 100;
 
-Console.WriteLine("Titular: " + conta1.titular);
-Console.WriteLine("Conta: " + conta1.conta);
-Console.WriteLine("Numero da Agencia: " + conta1.numeroAgencia);
-Console.WriteLine("Nome da Agencia: " + conta1.nomeAgencia);
-Console.WriteLine("Saldo: " + conta1.saldo);
+ContaCorrente conta2 = new ContaCorrente();
+conta2.titular = "Amanda Nogueira";
+conta2.conta = "10106-X";
+conta2.numeroAgencia = 321;
+conta2.nomeAgencia = "Agência Central";
+conta2.saldo = 100;
 
 Console.ReadKey();
