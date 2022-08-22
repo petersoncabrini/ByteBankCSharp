@@ -1,9 +1,12 @@
-﻿namespace byteBank
+﻿using byteBank.Titular;
+
+namespace byteBank
 {
     //A classe e um modelo para criar um objeto
     public class ContaCorrente
     {
         //Campos sao variaveis definidas em uma classe
+        public Cliente titular;
         public string conta;
         public int numeroAgencia;
         public string nomeAgencia;
