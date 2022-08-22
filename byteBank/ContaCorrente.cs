@@ -4,7 +4,6 @@
     public class ContaCorrente
     {
         //Campos sao variaveis definidas em uma classe
-        public string titular;
         public string conta;
         public int numeroAgencia;
         public string nomeAgencia;
@@ -12,7 +11,6 @@
 
         public void ExibirDadosDaConta()
         {
-            Console.WriteLine("Titular :" + titular);
             Console.WriteLine("Conta :" + conta);
             Console.WriteLine("Número Agência :" + numeroAgencia);
             Console.WriteLine("Nome Agência :" + nomeAgencia);
