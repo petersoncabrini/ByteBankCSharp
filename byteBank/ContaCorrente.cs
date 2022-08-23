@@ -2,16 +2,18 @@
 
 namespace byteBank
 {
-    //A classe e um modelo para criar um objeto
+    //A classe é um modelo para criar um objeto
     public class ContaCorrente
     {
-        //Campos sao variaveis definidas em uma classe
+        //Campos são variáveis definidas em uma classe
         public Cliente titular;
         public string conta;
         public int numeroAgencia;
         public string nomeAgencia;
-        public double saldo;
+        //private => o saldo torna-se visivel somente dentro dos metodos da classe ContaCorrente
+        private double saldo;
 
+        //Metodo ExibirDadosDaConta
         public void ExibirDadosDaConta()
         {
             Console.WriteLine("Conta :" + conta);
@@ -20,6 +22,7 @@ namespace byteBank
             Console.WriteLine("Saldo: " + saldo);
         }
 
+        //Metodo Sacar
         public bool Sacar(double valor)
         {
             if (saldo < valor)
@@ -37,11 +40,13 @@ namespace byteBank
             }
         }
 
+        //Metodo Depositar
         public void Depositar(double valor)
         {
             saldo = saldo + valor;
         }
 
+        //Metodo Transferir
         public bool Transferir(double valor, ContaCorrente destino)
         {
             if (saldo < valor)
@@ -57,6 +62,19 @@ namespace byteBank
                 saldo = saldo - valor;
                 destino.saldo = destino.saldo + valor;
                 return true;
+            }
+        }
+
+        //Metodo DefinirSaldo, para manipular o campo privado
+        public void DefinirSaldo(double valor)
+        {
+            if (valor < 0)
+            {
+                return;
+            }
+            else
+            {
+                saldo = saldo + valor;
             }
         }
     }
