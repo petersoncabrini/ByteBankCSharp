@@ -77,5 +77,11 @@ namespace byteBank
                 saldo = saldo + valor;
             }
         }
+
+        //Metodo ObterSaldo
+        public double ObterSaldo()
+        {
+            return saldo;
+        }
     }
 }
