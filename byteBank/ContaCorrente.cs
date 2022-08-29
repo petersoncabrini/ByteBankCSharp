@@ -6,19 +6,21 @@ namespace byteBank
     public class ContaCorrente
     {
         //Campos são variáveis definidas em uma classe
-        public Cliente titular;
-        public string conta;
-        public int numeroAgencia;
-        public string nomeAgencia;
-        //private => o saldo torna-se visivel somente dentro dos metodos da classe ContaCorrente
+        //Propriedades autoimplementadas
+        public Cliente Titular { get; set; }
+        public string Conta { get; set; }
+        public int Numero_Agencia { get; set; }
+        public string Nome_Agencia { get; set; }
+
+        //private: o saldo torna-se visivel somente dentro dos metodos da classe ContaCorrente
         private double saldo;
 
         //Metodo ExibirDadosDaConta
         public void ExibirDadosDaConta()
         {
-            Console.WriteLine("Conta :" + conta);
-            Console.WriteLine("Número Agência :" + numeroAgencia);
-            Console.WriteLine("Nome Agência :" + nomeAgencia);
+            Console.WriteLine("Conta :" + Conta);
+            Console.WriteLine("Número Agência :" + Numero_Agencia);
+            Console.WriteLine("Nome Agência :" + Nome_Agencia);
             Console.WriteLine("Saldo: " + saldo);
         }
 
@@ -65,23 +67,21 @@ namespace byteBank
             }
         }
 
-        //Metodo DefinirSaldo, para manipular o campo privado
-        public void DefinirSaldo(double valor)
+        //Propriedade Saldo
+        public double Saldo
         {
-            if (valor < 0)
+            get
             {
-                return;
+                return saldo;
             }
-            else
+            set
             {
-                saldo = saldo + valor;
+                if (value < 0)
+                {
+                    return;
+                }
+                saldo = value;
             }
-        }
-
-        //Metodo ObterSaldo
-        public double ObterSaldo()
-        {
-            return saldo;
         }
     }
 }
