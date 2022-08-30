@@ -30,6 +30,7 @@ namespace byteBank
             }
         }
 
+        //underscore para referenciar um campo
         private int _numero_agencia;
 
         public int Numero_agencia
@@ -129,6 +130,10 @@ namespace byteBank
         {
             Numero_agencia = numero_agencia;
             Conta = conta;
+            TotalDeContasCriadas += 1;
         }
+
+        //Propriedade da classe e nao do objeto (static)
+        public static int TotalDeContasCriadas { get; set; }
     }
 }
