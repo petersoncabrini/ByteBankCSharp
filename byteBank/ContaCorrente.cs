@@ -61,6 +61,7 @@ namespace byteBank
         //Metodo ExibirDadosDaConta
         public void ExibirDadosDaConta()
         {
+            Console.WriteLine("Titular: " + Titular);
             Console.WriteLine("Conta :" + Conta);
             Console.WriteLine("Número Agência :" + Numero_agencia);
             Console.WriteLine("Nome Agência :" + Nome_Agencia);
@@ -126,8 +127,10 @@ namespace byteBank
                 saldo = value;
             }
         }
-        public ContaCorrente(int numero_agencia, string conta)
+        public ContaCorrente(Cliente titular, string nomeAgencia, int numero_agencia, string conta)
         {
+            Titular = titular;
+            Nome_Agencia = nomeAgencia;
             Numero_agencia = numero_agencia;
             Conta = conta;
             TotalDeContasCriadas += 1;
@@ -135,5 +138,5 @@ namespace byteBank
 
         //Propriedade da classe e nao do objeto (static)
         public static int TotalDeContasCriadas { get; set; }
-    }
+}
 }
