@@ -12,14 +12,13 @@ namespace byteBank_Admin.Funcionarios
         // 1 - diretor
         // 2 - designer
         // N - ...
-        private int _tipo;
+        //private int _tipo;
 
         //Construtor
-        public Funcionario (int _tipo)
-        {
-            this._tipo = _tipo;
-        }
-
+        //public Funcionario (int _tipo)
+        //{
+        //    this._tipo = _tipo;
+        //}
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public double Salario { get; set; }
@@ -27,14 +26,14 @@ namespace byteBank_Admin.Funcionarios
         // Metodo para obter a bonificacao conforme o tipo do funcionario
         public double getBonificacao()
         {
-            if (_tipo == 1)
-            {
-                return Salario;
-            }
-            else
-            {
+            //if (_tipo == 1)
+            //{
+            //    return Salario;
+            //}
+            //else
+            //{
                 return Salario * 0.1;
-            }
+            //}
         }
     }
 }
