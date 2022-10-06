@@ -6,6 +6,7 @@ namespace byteBank
     public class ContaCorrente
     {
         //Campos são variáveis definidas em uma classe
+
         //Propriedades autoimplementadas
         public Cliente Titular { get; set; }
 

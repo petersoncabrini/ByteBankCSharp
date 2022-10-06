@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace byteBank_Admin.Funcionarios
 {
-    // Diretor herda da classe Funcionario, tendo acesso assim as propriedades da mesma.
+    // Diretor (derivada ou subclasse) herda da classe Funcionario (superclasse), tendo acesso assim as propriedades e metodos da mesma.
     public class Diretor: Funcionario
     {
-        public double getBonificacao()
+        // Adicionando override, eu estou redefinindo o metodo na classe derivada
+        public override double getBonificacao()
         {
-            return Salario;
+            return Salario + base.getBonificacao();
         }
     }
 }
