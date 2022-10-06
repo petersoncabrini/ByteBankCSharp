@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace byteBank_Admin.Funcionarios
 {
-    public class Diretor
+    // Diretor herda da classe Funcionario, tendo acesso assim as propriedades da mesma.
+    public class Diretor: Funcionario
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-
         public double getBonificacao()
         {
             return Salario;
